@@ -1,0 +1,449 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+:root {
+    --main-Color: #10CAB7;
+}
+.container {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 1170px;
+    margin: auto;
+    position: relative;
+}
+
+/*Landing-Section Started*/
+.landing-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-image: url('../Images/landing.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    padding: 15px 40px;
+    background-color: white;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.links {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    position: relative;
+}
+.links span:nth-child(3) {
+    width: 50%;
+    float: right;
+    transition: 300ms all linear
+}
+.links .items::before {
+    content: "";
+    position: absolute;
+    top: -28px;
+    right: 5px;
+    border-bottom: 15px solid #eee;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-left: 15px solid transparent;
+}
+.links .items { 
+    display: none;
+    position: absolute;
+    top: 30px;
+}
+.links .items a{
+    text-decoration: none;
+    color: black;
+} 
+.links .items li:hover{
+    padding-left: 35px;
+}
+.links .items li{
+    transition: 300ms all linear;
+    border-bottom: 1px solid #bbb;
+    text-align: left;
+    padding: 13px 20px;
+    width: 180px;
+    background-color: #eee; 
+    list-style-type: none;
+}
+.links:hover .items{
+    display: block;
+}
+.links:hover span:nth-child(3) {
+    width: 100%
+}
+.links span {
+    margin-bottom: 5px;
+    display: block;
+    width: 30px;
+    border-top: 2px solid #000;
+}
+.landing-text h1{
+    color: var(--main-Color);
+    font-size: 3rem;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+.landing-text p{
+    margin-bottom: 10px;
+}
+.landing-text {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+}
+/*Landing-Section Finished*/
+/*Second-Section Started*/
+.cols-section {
+    background-color: #eee;
+}
+.work-features-cont {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 50px;
+    justify-content: center;
+}
+.element {
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 30px;
+    line-height: 2em;
+}
+.element i{
+    color: var(--main-Color);
+    font-size: 3rem;
+}
+.element p:nth-child(3){
+    color: gray;
+}
+.element p:nth-child(2){
+    font-size: 20px;
+    font-weight: bold;
+}
+.element > *:not(:last-child){
+    margin-bottom: 20px;
+}
+
+/*Second-Section Finished*/
+/*Services-Section Started*/
+.sevices-section {
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.head-section-text > p{
+    width: fit-content;
+    margin: auto;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    color: gray;
+    font-size: 1.2em;
+    position: relative;
+}
+.head-section-text p::before{
+    content: "Services";
+    width: fit-content;
+    font-size: 5rem;
+    left: -35px;
+    top: 80px;
+    font-weight: bold;
+    opacity: 0.2;
+    position: absolute
+}
+i {
+    color: var(--main-Color)
+}
+.service-plus-image {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+}
+.services-cont {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px 30px;
+}
+.service {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: flex-start;
+    gap: 17px;
+    margin-bottom: 40px;
+}
+.service-img {
+    align-self: center;
+    position: relative;
+}
+.service-img img {
+    z-index: 2;
+    position: relative;
+}
+.service-img::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 380px;
+    top: -40px;
+    right: -40px;
+    z-index: 0;
+    background-color:steelblue
+}
+.service i {
+    font-size: 2em;
+    grid-row: span 2;
+}
+.service p:last-child {
+    color: gray;
+    line-height: 1.5em;
+}
+.service p:nth-child(2) {
+    font-weight: bold;
+    font-size: large;
+}
+/*Services-Section Finished*/
+/*Portfolio-Section Started*/
+.portfolio-section {
+    background-color: #eee;
+}
+.portfolio-section .head-section-text p::before{
+    content: "Portfolio";
+    left: -10px;
+}
+.projects-cont {
+    padding-bottom: 60px;
+    gap: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    overflow: hidden;
+}
+.img-cont {
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    height: fit-content;
+    height: 227px;
+    overflow: hidden;
+}
+.project .img-cont img{
+    width: 100%;
+}
+.project .text{
+    padding: 20px;
+}
+.project .text p:first-child{
+    margin-bottom: 5px;
+}
+.project {
+    width: 340px;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.project .text p:first-child{
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.project .text p:last-child {
+    color: gray;
+    line-height: 1.5em;
+}
+/*Portfolio Section Finished*/
+/*About Section Started*/
+.about-section {
+    padding-bottom: 100px;
+}
+.about-section .head-section-text p::before{
+    content: "About";
+    left: -35px;
+}
+.about-details {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    gap: 200px
+}
+.about-details .about-text {
+    height: 100%;
+    display: flex;
+    line-height: 2em;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+.about-details .about-text p:last-child{
+    color: gray;
+    position: relative;
+}
+.about-details .about-text p:last-child::before{
+    content: "";
+    width: 50%;
+    top: -10px;
+    height: 1px;
+    background-color: #10CAB7;
+    border-top: 1px solid black;
+    position: absolute;
+}
+.about-details .about-text p:first-child{
+    font-weight: bold;
+}
+.about-img {
+    position: relative;
+}
+.about-details .about-img::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 80%;
+    height: 80%;
+    top: -40px;
+    right: -60%;
+    background-image: linear-gradient(to right, #10CAB7 0% , #10CAB7 50% , transparent 50% , transparent 100%);
+    border-bottom: 70px solid #10CAB7;
+}
+.about-details .about-img::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    z-index: -1;
+    height: 130%;
+    top: -15%;
+    left: -40px;
+    background-color: #eee;
+}
+/*About Section Finished*/
+/*Contact Section Started*/
+.contact-section {
+    background-color: #eee;
+    padding-bottom: 30px;
+}
+.contact-section .head-section-text p::before{
+    content: "Contact";
+    left: -60px;
+}
+.contact-text > *{
+    padding-bottom: 30px;
+}
+.contact-text {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+}
+.contact-text > p:nth-child(2) {
+    color: #10CAB7;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+.contact-text > p:first-child{
+    color: #2C4755;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.text-plus-icons p{
+    margin-right: 10px;
+}
+.text-plus-icons i{
+    margin-right: 10px;
+    color: #2C4755;
+    /* background-color: #2C4755; */
+}
+.text-plus-icons {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+/*Contact Section Finished*/
+footer {
+    background-color: #2C4755;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+footer p span {
+    color: #10CAB7;
+    font-weight: bold;
+}
+
+/*Responsiveness*/
+@media (max-width: 1200px) {
+    .container {width: 100%;}
+}
+
+@media (max-width: 900px) {
+    .service-img {
+        display: none;
+    }
+    .about-img::after, .about-img::before  {
+        display: none;
+    }
+    .about-img {
+        margin: auto;
+    }
+    .about-details {
+        grid-template-columns: 1fr;
+        gap : 0;
+    }
+    .about-text p:last-child::before{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .about-text > *{
+        margin-top: 80px;
+    }
+    .about-text {
+        padding: 50px;
+        text-align: center;
+        width: 100%;
+    }
+}
+@media (max-width: 750px) {
+    .project {
+        width: 100%;
+        height: fit-content;
+    }
+    .work-features-cont .element {
+        width: 100%;
+    }
+}
+@media (max-width: 700px) {
+    .service {
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+    
+    .services-cont {
+        grid-template-columns: auto;
+    }
+    .about-text {
+        padding: 15px;
+    }
+    .service-plus-image {
+        gap: 0;
+    }
+    .project {
+        width: 100%;
+    }
+}
+
+
+
