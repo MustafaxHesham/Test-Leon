@@ -115,12 +115,13 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     padding: 50px;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .element {
     display: inline-block;
     text-align: center;
     width: 300px;
+    margin: auto;
     margin-bottom: 30px;
     line-height: 2em;
 }
@@ -196,11 +197,11 @@ i {
     content: "";
     position: absolute;
     width: 100px;
-    height: 380px;
-    top: -40px;
+    height: 400px;
+    top: -50px;
     right: -40px;
     z-index: 0;
-    background-color:steelblue
+    background-color: #2C4755;
 }
 .service i {
     font-size: 2em;
